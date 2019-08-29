@@ -1,11 +1,11 @@
-import { Link } from "gatsby"
+import { Link, withAssetPrefix } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `black`,
       marginBottom: `1.45rem`,
     }}
   >
@@ -14,6 +14,9 @@ const Header = ({ siteTitle }) => (
         margin: `0 auto`,
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
+        display: 'grid',
+        gridTemplateColumns: 'auto auto auto',
+        
       }}
     >
       <h1 style={{ margin: 0 }}>
@@ -27,6 +30,18 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <h3 style={{
+        marginTop: '10px'
+      }}>
+      <Link
+      to="/page-2/"
+      style={{
+        color: 'white',
+        textDecoration: 'none',
+      }}> About
+      </Link>
+      </h3>
+
     </div>
   </header>
 )
